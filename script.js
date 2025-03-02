@@ -1,7 +1,9 @@
 const ageCalculate = () => {
+    //getting the date for today
     const today = new Date();
+    //getting input from the user
     const inputDate = new Date(document.getElementById("date-input").value);
-  
+  //getting info
     const birthDetails = {
       date: inputDate.getDate(),
       month: inputDate.getMonth() + 1,
@@ -59,7 +61,7 @@ const ageCalculate = () => {
     }
     return { years, months, days };
   };
-  
+  //getting days in the month
   const getDaysInMonth = (month, year) => {
     const isLeapYear = year % 4 === 0 && (year % 100 != 0 || year % 400 === 0);
     const getDaysInMonth = [
@@ -78,7 +80,7 @@ const ageCalculate = () => {
     ];
     return getDaysInMonth[month - 1];
   };
-  
+  //dispalying the result
   const displayResult = (bdate, bMonth, bYear) => {
     document.getElementById("years").textContent = bYear;
     document.getElementById("months").textContent = bMonth;
